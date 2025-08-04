@@ -24,6 +24,12 @@ const port = process.env.PORT || 3000;
 // Start server
 app.listen(port, () => console.log('App listening on port ' + port));
 
+/* PASSPORT SETUP */
+const passport = require('passport');
+
+app.use(passport.initialize());
+app.use(passport.session());
+
 /* MONGOOSE SETUP */
 const mongoose = require('mongoose');
 const passportLocalMongoose = require('passport-local-mongoose');
