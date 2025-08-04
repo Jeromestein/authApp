@@ -10,7 +10,8 @@ const bodyParser = require('body-parser');
 const expressSession = require('express-session')({
     secret: 'secret',
     resave: false,
-    saveUninitialized: false
+    saveUninitialized: false,
+    cookie: { secure: false, maxAge: 60000 }
 });
 
 // Use middleware
